@@ -1,16 +1,20 @@
-#Desenvolva um programa que só deve aceitar números pares. Siga as seguintes instruções:
+#Desenvolva um programa que recebe do usuário nome completo e ano de nascimento que seja entre 1922 e 2021.
+#A partir dessas informações, o sistema mostrará o nome do usuário e a idade que completou, ou completará, no ano atual (2022).
 
-#caso um número ímpar seja digitado, informe ao usuário que ele digitou um valor ímpar e peça novamente por um número par;
+#Caso o usuário não digite um número ou apareça um inválido no campo do ano, o sistema informará o erro e continuará perguntando até que um valor correto seja preenchido.
 
-#caso uma letra seja digitada, informe ao usuário que ele digitou um caractere inválido e peça novamente por um número par.
-
-def numerosPares(num1):
-    if num1 %2 ==0:
-        print('O número informado é par')
+def nomeIdade():
+    nome = str(input('Informe seu nome '))
+    ano = int(input('Informe o ano de nascimento '))
+    if (ano >= 1992) and (ano <=2021):
+        calc = 2021 - ano
+        print(f'Seu nome é {nome} e você tem {calc} anos de idade')
     else:
-        print('O número informado é impar')
+        print('Ano digitado incorretamente, por favor digite novamente')
+    
+    
    
     
  
 
-numerosPares(7)
+nomeIdade()
